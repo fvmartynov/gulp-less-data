@@ -1,5 +1,9 @@
 # Gulp LESS Data
 
+## Fork info
+Fixed bug:
+* Data property serialized as undefined if contains slashes. Now serialized as strings.
+
 ## Install
 ```sh
 npm install gulp-less-data

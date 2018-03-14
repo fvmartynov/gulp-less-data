@@ -17,8 +17,9 @@ function serializeData(data) {
     for (var name in data) {
         if (Object.hasOwnProperty.call(data, name)) {
             var value = data[name];
-            s += ((name[0] === '@') ? '' : '@') + name +': '+ value +
-                    ((('' + value).slice(-1) === ';') ? '' : ';');
+            s += ((name[0] === '@') ? '' : '@') + name +': '+
+                ((value.toString().indexOf('/') > -1) ? '"' + value + '"' : value) +
+                ((('' + value).slice(-1) === ';') ? '' : ';');
             s += "\n";
         }
     }
